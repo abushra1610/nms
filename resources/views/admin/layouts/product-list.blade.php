@@ -47,7 +47,7 @@
                 <td>{{$product->status}}</td>
             </tr>
         @endforeach
-   
+
     </tbody>
 </table>
 @endsection

@@ -2,24 +2,35 @@
 
 namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
-use App\Models\Work;
+use App\Models\scholarship;
 use App\Http\Controllers\Controller;
 
 class NgoController extends Controller
 {
     public function create()
     {
-        return view('admin.layouts.add-work');
+        return view('admin.layouts.add-scholarship');
     }
 
 
    public function store(Request $request)
    {
-       dd($request->all());
-           Work::create([
+    //    dd($request->all());
+           Scholarship::create([
           'name'=>$request->name,
-          'list'=>$request->list
+          'address'=>$request->address,
+          'contact'=>$request->contact,
+          'institution'=>$request->institution,
+          'scholarship'=>$request->scholarship,
+
+
       ]);
       return redirect()->back();
     }
+    // public function List()
+    // {
+    //     $lists=Work::all();
+    //     return view('admin.layouts.user-information',compact('lists'));
+    // }
+
 }

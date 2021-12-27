@@ -4,6 +4,14 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\NgoController;
+use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\Frontend\UserController;
+use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\EventController;
+use App\Http\Controllers\Frontend\BoardController;
+use App\Http\Controllers\Frontend\NoticeController;
+use App\Http\Controllers\Frontend\SshipController;
+use App\Http\Controllers\Backend\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,19 +25,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('admin');
-});
 
 
-Route::group(['prefix'=>'admin-portal'],function(){
+
+
+
+Route::get('/admin-portal/login',[LoginController::class,'login'])->name('admin.login');
+Route::post('/admin-portal/login',[LoginController::class,'doLogin'])->name('admin.do.login');
+
+
+
+Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
     Route::get('/', function () {
         return view('admin.master');
     })->name('admin');
-    Route::get('/orders',[OrderController::class,'orderList'])->name('admin.orders');
+
+
+
+
+    Route::get('/sign out',[LoginController::class,'logout'])->name('admin.logout');
+
     Route::get('/products',[ProductController::class,'productList'])->name('admin.products');
     Route::get('/products/create',[ProductController::class,'productCreate'])->name('admin.products.create');
-    Route::post('/products/store',[ProductController::class,'productStore'])->name('admin.products.store');
+    Route::post('/products/create/store',[ProductController::class,'productStore'])->name('admin.products.store');
 
     // Category
 
@@ -37,6 +55,57 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/category/form',[CategoryController::class,'form'])->name('category.form');
     Route::post('/category/add',[CategoryController::class,'add'])->name('category.add');
 
-    Route::get('/admin',[NgoController::class,'create'])->name('work.create');
-   Route::post('/admin',[NgoController::class,'store'])->name('work.store');
+    Route::get('/admin',[NgoController::class,'create'])->name('scholarship.create');
+    Route::post('/admin',[NgoController::class,'store'])->name('scholarship.store');
+   //Route::get('/',[NgoController::class,'List'])->name('scholarship.information');
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/', function () {
+    return redirect()->route('user');
+ });
+
+
+Route::group(['prefix'=>'user-portal'],function(){
+    Route::get('/', function () {
+        return view('frontend.index');
+    })->name('user');
+
+
+
+Route::post('/registration',[UserController::class,'registration'])->name('user.registration');
+Route::post('/login',[UserController::class,'login'])->name('user.login');
+Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
+
+
+Route::get('/home',[BoardController::class,'board'])->name('user.board');
+
+
+
+Route::get('/contact',[ContactController::class,'contact'])->name('user.contact');
+
+
+
+Route::get('/event',[EventController::class,'event'])->name('user.event');
+
+
+Route::get('/notice',[NoticeController::class,'notice'])->name('user.notice');
+
+
+Route::get('/scholarship',[SshipController::class,'sship'])->name('user.sship');
+
 });

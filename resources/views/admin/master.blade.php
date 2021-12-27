@@ -1,275 +1,187 @@
-<h1>
-    <!DOCTYE html>
-    <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Target Material Design Bootstrap Admin Template</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="{{url('/assets/materialize/css/materialize.min.css')}}" media="screen,projection" />
-        <!-- Bootstrap Styles-->
-        <link href="{{url('/assets/css/bootstrap.css')}}" rel="stylesheet"/>
-        <!-- FontAwesome Styles-->
-        <link href="{{url('/assets/css/font-awesome.css')}}" rel="stylesheet"/>
-        <!-- Morris Chart Styles-->
-        <link href="{{url('/assets/js/morris/morris-0.4.3.min.css')}}"rel="stylesheet" />
-        <!-- Custom Styles-->
-        <link href="{{url('/assets/css/custom-styles.css')}}" rel="stylesheet"/>
-        <!-- Google Fonts-->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-        <link rel="stylesheet" href="{{url('/assets/js/Lightweight-Chart/cssCharts.css')}}">
-    </head>
+<h1><!--
+=========================================================
+* Argon Dashboard - v1.2.0
+=========================================================
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
 
-    <body>
-        <div id="wrapper">
-           @include('admin.partials.header')
-            <div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
-                </div>
 
-                <ul class="nav navbar-top-links navbar-right">
-                    <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i class="fa fa-envelope fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i class="fa fa-tasks fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
-                      <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b>John Doe</b> <i class="material-icons right">arrow_drop_down</i></a></li>
-                </ul>
-            </nav>
-            <!-- Dropdown Structure -->
-    <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
-    </li>
-    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-    </li>
-    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-    </li>
-    </ul>
-    <ul id="dropdown2" class="dropdown-content w250">
-      <li>
-                                    <div>
-                                        <i class="fa fa-comment fa-fw"></i> New Comment
-                                        <span class="pull-right text-muted small">4 min</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                    <div>
-                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                        <span class="pull-right text-muted small">12 min</span>
+* Copyright  Creative Tim (http://www.creative-tim.com)
+* Coded by www.creative-tim.com
 
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                    <div>
-                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                        <span class="pull-right text-muted small">4 min</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                    <div>
-                                        <i class="fa fa-tasks fa-fw"></i> New Task
-                                        <span class="pull-right text-muted small">4 min</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                    <div>
-                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                        <span class="pull-right text-muted small">4 min</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a class="text-center" href="#">
-                                    <strong>See All Alerts</strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </li>
-    </ul>
-    <ul id="dropdown3" class="dropdown-content dropdown-tasks w250">
-    <li>
-            <a href="#">
-                <div>
-                    <p>
-                        <strong>Task 1</strong>
-                        <span class="pull-right text-muted">60% Complete</span>
-                    </p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                            <span class="sr-only">60% Complete (success)</span>
-                        </div>
+
+
+=========================================================
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>NGO Managment System</title>
+  <!-- Favicon -->
+  <link rel="icon" href="{{url('assets/img/brand/favicon.png')}}" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="{{url('assets/vendor/nucleo/css/nucleo.css')}}" type="text/css">
+  <link rel="stylesheet" href="{{url('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" type="text/css">
+  <!-- Page plugins -->
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="{{url('assets/css/argon.css?v=1.2.0" type="text/css')}}">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  
+@include('admin.partials.sidenav')
+
+  <!-- Main content -->
+  <div class="main-content" id="panel">
+    <!-- Topnav -->
+@include('admin.partials.topnav')
+
+    <!-- Header -->
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+              <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
+              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                  <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Default</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-lg-6 col-5 text-right">
+              <a href="#" class="btn btn-sm btn-neutral">New</a>
+              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+            </div>
+          </div>
+          <!-- Card stats -->
+          <div class="row">
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
+                      <span class="h2 font-weight-bold mb-0">350,897</span>
                     </div>
-                </div>
-            </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-            <a href="#">
-                <div>
-                    <p>
-                        <strong>Task 2</strong>
-                        <span class="pull-right text-muted">28% Complete</span>
-                    </p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
-                            <span class="sr-only">28% Complete</span>
-                        </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                        <i class="ni ni-active-40"></i>
+                      </div>
                     </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                    <span class="text-nowrap">Since last month</span>
+                  </p>
                 </div>
-            </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-            <a href="#">
-                <div>
-                    <p>
-                        <strong>Task 3</strong>
-                        <span class="pull-right text-muted">60% Complete</span>
-                    </p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                            <span class="sr-only">60% Complete (warning)</span>
-                        </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
+                      <span class="h2 font-weight-bold mb-0">2,356</span>
                     </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                        <i class="ni ni-chart-pie-35"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                    <span class="text-nowrap">Since last month</span>
+                  </p>
                 </div>
-            </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-            <a href="#">
-                <div>
-                    <p>
-                        <strong>Task 4</strong>
-                        <span class="pull-right text-muted">85% Complete</span>
-                    </p>
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                            <span class="sr-only">85% Complete (danger)</span>
-                        </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
+                      <span class="h2 font-weight-bold mb-0">924</span>
                     </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                        <i class="ni ni-money-coins"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                    <span class="text-nowrap">Since last month</span>
+                  </p>
                 </div>
-            </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-    </ul>
-    <ul id="dropdown4" class="dropdown-content dropdown-tasks w250 taskList">
-      <li>
-                                    <div>
-                                        <strong>John Doe</strong>
-                                        <span class="pull-right text-muted">
-                                            <em>Today</em>
-                                        </span>
-                                    </div>
-                                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                    <div>
-                                        <strong>John Smith</strong>
-                                        <span class="pull-right text-muted">
-                                            <em>Yesterday</em>
-                                        </span>
-                                    </div>
-                                    <p>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</p>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <strong>John Smith</strong>
-                                        <span class="pull-right text-muted">
-                                            <em>Yesterday</em>
-                                        </span>
-                                    </div>
-                                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the...</p>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a class="text-center" href="#">
-                                    <strong>Read All Messages</strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </li>
-    </ul>
-           <!--/. NAV TOP  -->
-          @include('admin.partials.nav')
-
-
-
-
-
-
-
-
-
-                        <div class="col-md-8 col-sm-12 col-xs-12">
-        <div class="card">
-
-
-                         </div>
-                        </div>
-
-
-
-                        </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
+                      <span class="h2 font-weight-bold mb-0">49,65%</span>
                     </div>
-                    <!-- /. ROW  -->
-                   <div class="fixed-action-btn horizontal click-to-toggle">
-        <a class="btn-floating btn-large red">
-          <i class="material-icons">menu</i>
-        </a>
-        <ul>
-          <li><a class="btn-floating red"><i class="material-icons">track_changes</i></a></li>
-          <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-          <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-          <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-        </ul>
-      </div>
-
-
-
-
-                    <footer><p>All right reserved. Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p>
-
-
-                    </footer>
-            <!-- /. PAGE WRAPPER  -->
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                        <i class="ni ni-chart-bar-32"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                    <span class="text-nowrap">Since last month</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- /. WRAPPER  -->
-        <!-- JS Scripts-->
-        <!-- jQuery Js -->
-        <script src="{{url('/assets/js/jquery-1.10.2.js')}}"></script>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div style="margin:80px;">
+    @yield('content')
+    </div>
+      <!-- Footer -->
 
-        <!-- Bootstrap Js -->
-        <script src="{{url('/assets/js/bootstrap.min.js')}}"></script>
+      @include('admin.partials.footer')
 
-        <script src="{{url('/assets/materialize/js/materialize.min.js')}}"></script>
+    </div>
+  </div>
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="{{url('assets/vendor/jquery/dist/jquery.min.js')}}"></script>
+  <script src="{{url('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url('assets/vendor/js-cookie/js.cookie.js')}}"></script>
+  <script src="{{url('assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js')}}"></script>
+  <script src="{{url('assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js')}}"></script>
+  <!-- Optional JS -->
+  <script src="{{url('assets/vendor/chart.js/dist/Chart.min.js')}}"></script>
+  <script src="{{url('assets/vendor/chart.js/dist/Chart.extension.js')}}"></script>
+  <!-- Argon JS -->
+  <script src="{{url('assets/js/argon.js?v=1.2.0')}}"></script>
+</body>
 
-        <!-- Metis Menu Js -->
-        <script src="{{url('/assets/js/jquery.metisMenu.js')}}"></script>
-        <!-- Morris Chart Js -->
-        <script src="{{url('/assets/js/morris/raphael-2.1.0.min.js')}}"></script>
-        <script src="{{url('/assets/js/morris/morris.js')}}"></script>
-
-
-        <script src="{{url('/assets/js/easypiechart.js')}}"></script>
-        <script src="{{url('/assets/js/easypiechart-data.js')}}"></script>
-
-         <script src="{{url('/assets/js/Lightweight-Chart/jquery.chart.js')}}"></script>
-
-        <!-- Custom Js -->
-        <script src="{{url('/assets/js/custom-scripts.js')}}"></script>
-
-
-    </body>
-
-    </html></h1>
+</html>
+</h1>
