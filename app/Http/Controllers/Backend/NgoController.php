@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\scholarship;
 use App\Http\Controllers\Controller;
 
+
 class NgoController extends Controller
 {
     public function create()
@@ -25,12 +26,5 @@ class NgoController extends Controller
 
 
       ]);
-      return redirect()->back();
     }
-    // public function List()
-    // {
-    //     $lists=Work::all();
-    //     return view('admin.layouts.user-information',compact('lists'));
-    // }
-
 }

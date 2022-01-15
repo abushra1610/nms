@@ -12,7 +12,7 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="examples/dashboard.html">
+              <a class="nav-link active" href="{{route('admin')}}">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
@@ -24,9 +24,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="examples/register.html">
+              <a class="nav-link" href="{{route('allBook')}}">
                 <i class="ni ni-circle-08 text-pink"></i>
-                <span class="nav-link-text">Scholarship Information</span>
+                <span class="nav-link-text">Books</span>
               </a>
             </li>
             <li class="nav-item">

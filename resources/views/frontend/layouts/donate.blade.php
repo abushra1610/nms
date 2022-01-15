@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -40,18 +41,29 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="section-title">Contact Us</h2>
+          <h2 class="section-title">Make A Donation</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-7 mb-4 mb-lg-0">
-            <form action="{{route('contact.store')}}" method="post">
+            <form action="{{route('donate.store')}}" method="post">
               @csrf
-                <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Your Name">
-            <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Your Email">
-            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
-            <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
-            <button type="submit" value="send" class="btn btn-primary">SEND MESSAGE</button>
+                <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Name">
+            <input type="text" class="form-control mb-3" id="subject" name="division" placeholder="Division">
+            <input type="text" class="form-control mb-3" id="subject" name="district" placeholder="District">
+            <input type="text"  class="form-control mb-3" id="subject" name="city" placeholder="City">
+            <input type="text"  class="form-control mb-3" id="subject" name="state" placeholder="City">
+            <input type="number" class="form-control mb-3" id="number" name="pin_code" placeholder="Pin code">
+            <input type="text" class="form-control mb-3" id="subject" name="nationality" placeholder="Nationality">
+            <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Email">
+            <input type="number" class="form-control mb-3" id="number" name="phone" placeholder="Phone">
+            <input type="subject" class="form-control mb-3" id="subject" name="donation" placeholder="Type of Donation">
+            <input type="number" class="form-control mb-3" id="number" name="nid" placeholder="Nid">
+            <input type="number" class="form-control mb-3" id="number" name="credit_card" placeholder="Credit card">
+            <input type="number" class="form-control mb-3" id="number" name="card_number" placeholder="Card Number">
+            <input type="date" class="form-control mb-3" id="number" name="date" placeholder="Date">
+
+            <button type="submit" value="send" class="btn btn-primary">Submit</button>
           </form>
         </div>
 
@@ -81,3 +93,4 @@
 
                         </body>
                         </html>
+

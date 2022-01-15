@@ -25,6 +25,7 @@ class LoginController extends Controller
 
 
         if(Auth::attempt($userInfo)){
+            // dd($userInfo);
             return redirect()->route('admin')->with('message','Login successful.');
         }
         // return redirect()->back()->with('error','Invalid user credentials');

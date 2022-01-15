@@ -40,7 +40,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="section-title">Contact Us</h2>
+          <h2 class="section-title">Apply For Book</h2>
         </div>
       </div>
       <div class="row">
@@ -50,8 +50,8 @@
                 <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Your Name">
             <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Your Email">
             <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
-            <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
-            <button type="submit" value="send" class="btn btn-primary">SEND MESSAGE</button>
+
+            <button type="submit" value="send" class="btn btn-primary">Submit</button>
           </form>
         </div>
 
@@ -81,3 +81,5 @@
 
                         </body>
                         </html>
+
+

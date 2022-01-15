@@ -36,7 +36,7 @@
                 <a class="nav-link" href="{{route('user.board')}}">Home</a>
               </li>
               <li class="nav-item @@about">
-                <a class="nav-link" href="">About</a>
+                <a class="nav-link" href="{{route('user.about')}}">About</a>
               </li>
               <li class="nav-item @@events">
                 <a class="nav-link" href="{{route('user.event')}}">EVENTS</a>

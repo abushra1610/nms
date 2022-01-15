@@ -6,12 +6,19 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\NgoController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\Frontend\UserController;
-use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\EventController;
 use App\Http\Controllers\Frontend\BoardController;
 use App\Http\Controllers\Frontend\NoticeController;
+use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\SshipController;
 use App\Http\Controllers\Backend\LoginController;
+use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\DonateController;
+use App\Http\Controllers\Frontend\DonationController;
+use App\Http\Controllers\Frontend\LoanController;
+use App\Http\Controllers\Frontend\ABookController;
+use App\Http\Controllers\Backend\ConController;
+use App\Http\Controllers\Backend\BookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,9 +42,9 @@ Route::post('/admin-portal/login',[LoginController::class,'doLogin'])->name('adm
 
 
 
-Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
+Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/', function () {
-        return view('admin.master');
+        return view('admin.partials.dash');
     })->name('admin');
 
 
@@ -58,6 +65,22 @@ Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
     Route::get('/admin',[NgoController::class,'create'])->name('scholarship.create');
     Route::post('/admin',[NgoController::class,'store'])->name('scholarship.store');
    //Route::get('/',[NgoController::class,'List'])->name('scholarship.information');
+
+
+      Route::get('/message',[ConController::class,'contactlist'])->name('admin.message');
+
+
+
+//route for All book list
+
+Route::get('/books',[BookController::class,'create'])->name('allBook');
+Route::get('/bookAdd/form',[BookController::class,'bookForm'])->name('bookForm');
+Route::post('/book/add',[BookController::class,'addBook'])->name('addBook');
+Route::post('/book/update/{id}',[BookController::class,'updateBook'])->name('updateBook');
+Route::get('/book/delete/{id}',[BookController::class,'deleteBook'])->name('deleteBook');
+
+
+
 
 
 
@@ -96,7 +119,11 @@ Route::get('/home',[BoardController::class,'board'])->name('user.board');
 
 
 
-Route::get('/contact',[ContactController::class,'contact'])->name('user.contact');
+Route::get('/contact',[ContactController::class,'Contact'])->name('user.contact');
+Route::post('/contact/store',[ContactController::class,'store'])->name('contact.store');
+
+Route::get('/donate',[DonateController::class,'Donate'])->name('user.donate');
+Route::post('/donate/store',[DonateController::class,'store'])->name('donate.store');
 
 
 
@@ -107,5 +134,22 @@ Route::get('/notice',[NoticeController::class,'notice'])->name('user.notice');
 
 
 Route::get('/scholarship',[SshipController::class,'sship'])->name('user.sship');
+
+
+Route::get('/about',[AboutController::class,'about'])->name('user.about');
+
+
+Route::get('/donation',[DonationController::class,'donation'])->name('user.donation');
+
+
+
+Route::get('/loan',[LoanController::class,'loan'])->name('user.loan');
+Route::post('/loan',[LoanController::class,'store'])->name('user.loan.store');
+
+
+Route::get('/abook',[ABookController::class,'abook'])->name('user.abook');
+
+
+
 
 });

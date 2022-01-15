@@ -40,18 +40,24 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="section-title">Contact Us</h2>
+          <h2 class="section-title">Apply For Loan</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-7 mb-4 mb-lg-0">
             <form action="{{route('contact.store')}}" method="post">
               @csrf
-                <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Your Name">
-            <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Your Email">
-            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
-            <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
-            <button type="submit" value="send" class="btn btn-primary">SEND MESSAGE</button>
+                <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Name">
+            <input type="number" class="form-control mb-3" id="number" name="number" placeholder="Phone">
+            <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Email">
+            <input type="date"  class="form-control mb-3" id="date" name="date" placeholder="Date Of Birth">
+            <input type="text" class="form-control mb-3" id="text" name="text" placeholder="Address">
+            <input type="number" class="form-control mb-3" id="number" name="number" placeholder="NID No">
+            <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Institution Name">
+            <input type="text" class="form-control mb-3" id="text" name="text" placeholder="Department">
+            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Occupation">
+            <textarea name="message" id="message" class="form-control mb-3" placeholder="Cause For Loan"></textarea>
+            <button type="submit" value="send" class="btn btn-primary">Submit</button>
           </form>
         </div>
 
@@ -81,3 +87,4 @@
 
                         </body>
                         </html>
+
