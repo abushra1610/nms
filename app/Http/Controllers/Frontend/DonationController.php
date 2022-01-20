@@ -12,4 +12,27 @@ class DonationController extends Controller
     {
         return view('frontend.layouts.donation');
     }
+
+
+    public function store(Request $request)
+    {
+        //  dd($request->all());
+        Donation::create([
+
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'occupation'=>$request->occupation,
+            'father_name'=>$request->father_name,
+            'father_occupation'=>$request->father_occupation,
+            'mother_name'=>$request->mother_name,
+            'mother_occupation'=>$request->mother_occupation,
+            'number_of_family_member'=>$request->number_of_family_member,
+            'address'=>$request->address,
+            'description'=>$request->description,
+        ]);
+
+        return redirect()->back()->with('msg','Thanks for your Feedback.');
+    }
+
 }

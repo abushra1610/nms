@@ -45,19 +45,19 @@
       </div>
       <div class="row">
         <div class="col-lg-7 mb-4 mb-lg-0">
-            <form action="{{route('contact.store')}}" method="post">
+            <form action="{{route('user.donation.store')}}" method="post">
               @csrf
                 <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Name">
             <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Email">
-            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Phone No">
-            <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Occupation">
-            <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Father Name">
-            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Father Occupation">
-            <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Mother Name">
-            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Mother Occupation">
-            <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Number of Family Member">
-            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Address">
-            <textarea name="message" id="message" class="form-control mb-3" placeholder="Description"></textarea>
+            <input type="number" class="form-control mb-3" id="number" name="phone" placeholder="Phone">
+            <input type="text"  class="form-control mb-3" id="name" name="occupation" placeholder="Occupation">
+            <input type="text" class="form-control mb-3" id="text" name="father_name" placeholder="Father_Name">
+            <input type="text" class="form-control mb-3" id="text" name="father_occupation" placeholder="Father_Occupation">
+            <input type="text" class="form-control mb-3" id="text" name="mother_name" placeholder="Mother_Name">
+            <input type="text" class="form-control mb-3" id="text" name="mother_occupation" placeholder="Mother_Occupation">
+            <input type="number" class="form-control mb-3" id="number" name="number_of_family_member" placeholder="Number_of_Family_Member">
+            <input type="text" class="form-control mb-3" id="subject" name="address" placeholder="Address">
+            <textarea name="description" id="message" class="form-control mb-3" placeholder="Description"></textarea>
             <button type="submit" value="send" class="btn btn-primary">Submit</button>
           </form>
         </div>

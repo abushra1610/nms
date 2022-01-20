@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
@@ -15,14 +14,23 @@ class LoanController extends Controller
 
 
 
-    public function store()
+    public function store(Request $request)
     {
+        // dd($request->all());
         Loan::create([
-            'name' => $request->input('name'),
-            'phone' => $request->input('phone'),
-            'email' => $request->input('email'),
-            'date of birth'=>$request->category,
-            'image'=>$filename
+
+            'name'=>$request->name,
+            'phon'=>$request->phon,
+            'email'=>$request->email,
+            'date_of_birth'=>$request->date_of_birth,
+            'address'=>$request->address,
+            'nid_no'=>$request->nid_no,
+            'institution'=>$request->institution,
+            'department'=>$request->department,
+            'occupation'=>$request->occupation,
+            'cause'=>$request->cause
         ]);
+
+        return redirect()->back()->with('msg','Thanks for your Feedback.');
     }
 }

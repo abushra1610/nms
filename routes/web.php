@@ -13,12 +13,18 @@ use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\SshipController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Backend\DAController;
+use App\Http\Controllers\Backend\AFDController;
 use App\Http\Controllers\Frontend\DonateController;
 use App\Http\Controllers\Frontend\DonationController;
 use App\Http\Controllers\Frontend\LoanController;
 use App\Http\Controllers\Frontend\ABookController;
 use App\Http\Controllers\Backend\ConController;
+use App\Http\Controllers\Backend\AFLController;
+use App\Http\Controllers\Backend\AFBController;
+use App\Http\Controllers\Backend\ScholarshipController;
 use App\Http\Controllers\Backend\BookController;
+use App\Http\Controllers\Backend\NoteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,8 +74,21 @@ Route::group(['prefix'=>'admin-portal'],function(){
 
 
       Route::get('/message',[ConController::class,'contactlist'])->name('admin.message');
+//amount
 
+Route::get('/amount',[DAController::class,'amount'])->name('admin.amount');
 
+// afdonation
+
+Route::get('/adonation',[AFDController::class,'adonation'])->name('admin.adonation');
+
+//loan
+
+Route::get('/loan',[AFLController::class,'loan'])->name('admin.loan');
+
+//book
+
+Route::get('/book',[AFBController::class,'book'])->name('admin.book');
 
 //route for All book list
 
@@ -80,10 +99,24 @@ Route::post('/book/update/{id}',[BookController::class,'updateBook'])->name('upd
 Route::get('/book/delete/{id}',[BookController::class,'deleteBook'])->name('deleteBook');
 
 
+//Notice
 
+Route::get('/note',[NoteController::class,'note'])->name('admin.Note.create');
+Route::post('/note/store',[NoteController::class,'store'])->name('admin.Note.store');
 
+Route::get('/note/delete/{id}',[NoteController::class,'delete'])->name('admin.layouts.note.delete');
+Route::get('/note/edit/{id}',[NoteController::class,'edit'])->name('admin.layouts.note.edit');
+Route::put('/note/edit/{id}',[NoteController::class,'update'])->name('admin.layouts.note.update');
+// Route::get('/employee/employee-list/view/{id}',[EmployeeController::class,'view'])->name('backend.employee.view');
 
+//scholarship
 
+Route::get('/scholarshipp',[ScholarshipController::class,'scholarshipp'])->name('admin.scholarshipp.create');
+Route::post('/scholarshipp/store',[ScholarshipController::class,'store'])->name('admin.scholarshipp.store');
+
+//approve
+
+Route::get('/approve/{id}',[DAController::class,'approve'])->name('admin.approve');
 });
 
 
@@ -140,6 +173,7 @@ Route::get('/about',[AboutController::class,'about'])->name('user.about');
 
 
 Route::get('/donation',[DonationController::class,'donation'])->name('user.donation');
+Route::post('/donation',[DonationController::class,'store'])->name('user.donation.store');
 
 
 
@@ -147,7 +181,9 @@ Route::get('/loan',[LoanController::class,'loan'])->name('user.loan');
 Route::post('/loan',[LoanController::class,'store'])->name('user.loan.store');
 
 
-Route::get('/abook',[ABookController::class,'abook'])->name('user.abook');
+Route::get('/abook',[ABookController::class,'book'])->name('user.abook');
+Route::post('/abook',[ABookController::class,'store'])->name('user.abook.store');
+
 
 
 

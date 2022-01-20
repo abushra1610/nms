@@ -30,15 +30,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="examples/profile.html">
+              <a class="nav-link" href="{{route('admin.Note.create')}}">
                 <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Details</span>
+                <span class="nav-link-text">Notice</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="examples/tables.html">
+              <a class="nav-link" href="{{route('admin.scholarshipp.create')}}">
                 <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Student Information</span>
+                <span class="nav-link-text">Scholarship_Information</span>
               </a>
             </li>
             <li class="nav-item">

@@ -16,29 +16,12 @@ class DonateController extends Controller
    public function store(Request $request)
    {
     //    dd($request->all());
+
            Donate::create([
-          'name'=>$request->name,
-          'division'=>$request->division,
-          'district'=>$request->district,
-          'city'=>$request->city,
-          'state'=>$request->state,
-          'pin_code'=>$request->pin_code,
-
-          'nationality'=>$request->nationality,
-
-          'email'=>$request->email,
-
-          'phone'=>$request->phone,
-
-          'donation'=>$request->donation,
-
-          'nid'=>$request->nid,
-
-          'credit_card'=>$request->credit_card,
-
-          'card_number'=>$request->card_number,
-
-                    'date'=>$request->date,
+          'amount'=>$request->ammount,
+          'transaction_id'=>$request->transaction_ID,
+          'payment_method'=>$request->payment_method,
+          'type'=>$request->type,
 
 
 

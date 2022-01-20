@@ -159,7 +159,8 @@
       <div class="col-12 text-center">
         <h6 class="text-white font-secondary mb-0"></h6>
         <h2 class="section-title text-white"></h2>
-        <a href="{{route('user.donate')}}" class="btn btn-secondary">Donate Here</a>
+        <li class="list-inline-item"><a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#mehadi">Donate Here</a></li>
+        {{-- <a href="{{route('user.donate')}}" class="btn btn-secondary">Donate Here</a> --}}
       </div>
     </div>
   </div>
@@ -232,3 +233,84 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="mehadi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form action="{{route('donate.store')}}" method="post" enctype="multipart/form-data">
+            @csrf
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Make A Donation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="">Amount:</label>
+                    <input name="ammount" type="number" class="form-control" placeholder="Amount">
+                </div>
+                <div class="form-group">
+                    <label for="">Transaction_ID</label>
+                    <input name="transaction_ID" type="number" class="form-control" placeholder="Transaction_ID">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Payment_method</label>
+                    <select name="payment_method" class="form-control" id="exampleFormControlSelect1">
+                      <option>bKash</option>
+                      <option>Rocket</option>
+                      <option>MCash</option>
+                      <option>OK_Wallet</option>
+                      <option>SureCash</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Type</label>
+                    <select  name="type" class="form-control" id="exampleFormControlSelect1">
+                      <option>Yearly</option>
+                      <option>Monthly</option>
+                      <option>Weekly</option>
+                    </select>
+                  </div>
+
+            <div class="modal-footer">
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

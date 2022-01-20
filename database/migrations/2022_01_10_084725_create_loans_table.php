@@ -16,11 +16,11 @@ class CreateLoansTable extends Migration
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('phon');
+            $table->integer('phon');
             $table->string('email');
-            $table->string('date of birth');
+            $table->string('date_of_birth');
             $table->string('address');
-            $table->string('nid no');
+            $table->integer('nid_no');
             $table->string('institution');
             $table->string('department');
             $table->string('occupation');

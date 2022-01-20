@@ -45,18 +45,18 @@
       </div>
       <div class="row">
         <div class="col-lg-7 mb-4 mb-lg-0">
-            <form action="{{route('contact.store')}}" method="post">
+            <form action="{{route('user.loan.store')}}" method="post">
               @csrf
                 <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Name">
-            <input type="number" class="form-control mb-3" id="number" name="number" placeholder="Phone">
+            <input type="number" class="form-control mb-3" id="number" name="phon" placeholder="Phone">
             <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Email">
-            <input type="date"  class="form-control mb-3" id="date" name="date" placeholder="Date Of Birth">
-            <input type="text" class="form-control mb-3" id="text" name="text" placeholder="Address">
-            <input type="number" class="form-control mb-3" id="number" name="number" placeholder="NID No">
-            <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Institution Name">
-            <input type="text" class="form-control mb-3" id="text" name="text" placeholder="Department">
-            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Occupation">
-            <textarea name="message" id="message" class="form-control mb-3" placeholder="Cause For Loan"></textarea>
+            <input type="date"  class="form-control mb-3" id="date" name="date_of_birth" placeholder="Date_Of_birth">
+            <input type="text" class="form-control mb-3" id="text" name="address" placeholder="Address">
+            <input type="number" class="form-control mb-3" id="number" name="nid_no" placeholder="NID_No">
+            <input type="text"  class="form-control mb-3" id="name" name="institution" placeholder="Institution_Name">
+            <input type="text" class="form-control mb-3" id="text" name="department" placeholder="Department">
+            <input type="text" class="form-control mb-3" id="subject" name="occupation" placeholder="Occupation">
+            <textarea name="cause" id="message" class="form-control mb-3"  placeholder="Cause For Loan"></textarea>
             <button type="submit" value="send" class="btn btn-primary">Submit</button>
           </form>
         </div>

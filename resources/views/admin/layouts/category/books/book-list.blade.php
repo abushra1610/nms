@@ -11,10 +11,11 @@
   </button></a><br>
 <br>
 
-<form action="">
+<form action="{{route('allBook')}}" method="GET">
 <div class="input-group rounded mt-3 mb-2">
   <div class="form-outline">
-    <input type="search" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
+    {{-- <input value="{{$key}}" type="text" placeholder="Search" name="search" class="form-control"> --}}
+    <input type="text" value="{{$key}}" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
     <!-- <label class="form-label" for="form1">Search</label> -->
   </div>
   <button type="submit" class="btn btn-primary">
@@ -128,7 +129,7 @@
     </div>
 
 
-    
+
     </tr>
    @endforeach
 

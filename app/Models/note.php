@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Models\Frontend;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ABook extends Model
+class note extends Model
 {
     use HasFactory;
+    protected $guarded=[];
 }

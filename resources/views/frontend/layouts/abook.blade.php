@@ -45,11 +45,12 @@
       </div>
       <div class="row">
         <div class="col-lg-7 mb-4 mb-lg-0">
-            <form action="{{route('contact.store')}}" method="post">
+            <form action="{{route('user.abook.store')}}" method="post">
               @csrf
-                <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Your Name">
-            <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Your Email">
-            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
+                <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Name">
+            <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Email">
+            <input type="text" class="form-control mb-3" id="subject" name="book_name" placeholder="Book_Name">
+            <input type="text" class="form-control mb-3" id="subject" name="writer" placeholder="Writer">
 
             <button type="submit" value="send" class="btn btn-primary">Submit</button>
           </form>
