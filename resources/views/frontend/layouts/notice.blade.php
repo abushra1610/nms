@@ -40,6 +40,9 @@
 
 <section class="section">
 
+
+
+
   </section>
 
   <script src="{{url('/frontend/plugins/jQuery/jquery.min.js')}}"></script>

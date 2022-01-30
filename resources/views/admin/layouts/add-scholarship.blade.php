@@ -14,15 +14,15 @@
         <input type="text" class="form-control"  required name="address" id="list">
       </div>
       <div class="form-group">
-        <label for="name">Contact Number:</label>
+        <label for="name">Contact_Number:</label>
         <input type="text" class="form-control" required  name="contact" id="name">
       </div>
       <div class="form-group">
-        <label for="list">Institution Name:</label>
+        <label for="list">Institution_Name:</label>
         <input type="text" class="form-control"  required name="institution" id="name">
       </div>
       <div class="form-group">
-        <label for="list">Scholarship Type:</label>
+        <label for="list">Scholarship_Type:</label>
         <input type="text" class="form-control"  required name="scholarship" id="name">
       </div>
       <button type="submit" class="btn btn-default">Submit</button>

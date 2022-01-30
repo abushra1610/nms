@@ -1,4 +1,4 @@
-@extends('admin.master')
+{{-- @extends('admin.master')
 
 
 @section('content')
@@ -21,5 +21,5 @@
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-@endsection
+@endsection --}}
 

@@ -11,7 +11,7 @@
 
           <div class="form-group">
             <label for="exampleInputName">Book Name</label>
-            <input name="name" type="text" class="form-control" id="exampleInputName" placeholder="Ex: Pother Pachali" required>
+            <input name="book_name" type="text" class="form-control" id="exampleInputName" placeholder="Ex: Pother Pachali" required>
 
         </div>
                 <div class="form-group">
@@ -26,6 +26,13 @@
         <div class="form-group">
             <label for="exampleInputEmail1">Book Writer</label>
             <input name="writer" type="text" class="form-control" id="exampleInputWriter1" placeholder="Ex: Adam" required>
+
+            <div class="form-group">
+                <label for="exampleInputName">Book File </label>
+                <input type="file" name="file"  class="form-control" id="exampleInput" placeholder="Ex:file" required>
+
+            </div>
+
 
           <div class="form-group">
             <div class="control">

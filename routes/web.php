@@ -24,6 +24,7 @@ use App\Http\Controllers\Backend\AFLController;
 use App\Http\Controllers\Backend\AFBController;
 use App\Http\Controllers\Backend\ScholarshipController;
 use App\Http\Controllers\Backend\BookController;
+use App\Http\Controllers\Backend\MemberController;
 use App\Http\Controllers\Backend\NoteController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,19 +44,20 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/admin-portal/login',[LoginController::class,'login'])->name('admin.login');
-Route::post('/admin-portal/login',[LoginController::class,'doLogin'])->name('admin.do.login');
 
 
 
-Route::group(['prefix'=>'admin-portal'],function(){
+
+
+
+    Route::get('admin/login',[LoginController::class,'login'])->name('admin.login');
+    Route::post('admin/do/login',[LoginController::class,'doLogin'])->name('admin.do.login');
+
+    Route::group(['prefix'=>'admin-portal'],function(){
+Route::group(['prefix'=>'admin','middleware'=>['auth']],function(){
     Route::get('/', function () {
         return view('admin.partials.dash');
     })->name('admin');
-
-
-
-
     Route::get('/sign out',[LoginController::class,'logout'])->name('admin.logout');
 
     Route::get('/products',[ProductController::class,'productList'])->name('admin.products');
@@ -95,8 +97,9 @@ Route::get('/book',[AFBController::class,'book'])->name('admin.book');
 Route::get('/books',[BookController::class,'create'])->name('allBook');
 Route::get('/bookAdd/form',[BookController::class,'bookForm'])->name('bookForm');
 Route::post('/book/add',[BookController::class,'addBook'])->name('addBook');
-Route::post('/book/update/{id}',[BookController::class,'updateBook'])->name('updateBook');
+Route::put('/book/update/{id}',[BookController::class,'updateBook'])->name('updateBook');
 Route::get('/book/delete/{id}',[BookController::class,'deleteBook'])->name('deleteBook');
+Route::get('/book/detail/{id}',[BookController::class,'details'])->name('detailBook');
 
 
 //Notice
@@ -117,6 +120,17 @@ Route::post('/scholarshipp/store',[ScholarshipController::class,'store'])->name(
 //approve
 
 Route::get('/approve/{id}',[DAController::class,'approve'])->name('admin.approve');
+
+//member
+
+Route::get('/member/form',[MemberController::class,'create'])->name('admin.member.create');
+Route::post('/member/store',[MemberController::class,'store'])->name('admin.member.store');
+Route::get('/member/list',[MemberController::class,'list'])->name('admin.member.list');
+// Route::get('/member/add',[MemberController::class,'add'])->name('admin.member.add');
+// Route::post('/member/add',[MemberController::class,'add/store'])->name('admin.member.store');
+
+
+});
 });
 
 
@@ -129,22 +143,20 @@ Route::get('/approve/{id}',[DAController::class,'approve'])->name('admin.approve
 
 
 
-
-
+Route::post('/registration',[UserController::class,'registration'])->name('user.registration');
+Route::post('/login',[UserController::class,'login'])->name('user.login');
 Route::get('/', function () {
     return redirect()->route('user');
  });
+ Route::get('/user', function () {
+    return view('frontend.index');
+})->name('user');
 
 
-Route::group(['prefix'=>'user-portal'],function(){
-    Route::get('/', function () {
-        return view('frontend.index');
-    })->name('user');
+Route::group(['prefix'=>'user-portal','middleware'=>['user']],function(){
 
 
 
-Route::post('/registration',[UserController::class,'registration'])->name('user.registration');
-Route::post('/login',[UserController::class,'login'])->name('user.login');
 Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
 
 
@@ -166,7 +178,9 @@ Route::get('/event',[EventController::class,'event'])->name('user.event');
 Route::get('/notice',[NoticeController::class,'notice'])->name('user.notice');
 
 
-Route::get('/scholarship',[SshipController::class,'sship'])->name('user.sship');
+Route::get('/scholarship',[SshipController::class,'ship'])->name('user.sship');
+ Route::get('/scholarship/application',[SshipController::class,'page'])->name('user.page');
+ Route::post('/scholarship/store',[ContactController::class,'store'])->name('user.store');
 
 
 Route::get('/about',[AboutController::class,'about'])->name('user.about');

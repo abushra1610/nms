@@ -1,148 +1,100 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
-   <!--Made with love by Mutiullah Samim -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+<style>
+.login-dark {
+  height: 1000px;
+  background-size: cover;
+  position: relative;
+}
 
-	<!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+.login-dark form {
+  max-width: 320px;
+  width: 90%;
+  background-color: #1e2833;
+  padding: 40px;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+}
 
-    <!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+.login-dark .illustration {
+  text-align: center;
+  padding: 15px 0 20px;
+  font-size: 100px;
+  color: #2980ef;
+}
 
-	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="styles.css">
-    <style>/* Made with love by Mutiullah Samim*/
+.login-dark form .form-control {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #434a52;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+}
 
-        @import url('https://fonts.googleapis.com/css?family=Numans');
+.login-dark form .btn-primary {
+  background: #214a80;
+  border: none;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 26px;
+  text-shadow: none;
+  outline: none;
+}
 
-        html,body{
-        background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100%;
-        font-family: 'Numans', sans-serif;
-        }
+.login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
+  background: #214a80;
+  outline: none;
+}
 
-        .container{
-        height: 100%;
-        align-content: center;
-        }
+.login-dark form .forgot {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
 
-        .card{
-        height: 370px;
-        margin-top: auto;
-        margin-bottom: auto;
-        width: 400px;
-        background-color: rgba(0,0,0,0.5) !important;
-        }
+.login-dark form .forgot:hover, .login-dark form .forgot:active {
+  opacity: 1;
+  text-decoration: none;
+}
 
-        .social_icon span{
-        font-size: 60px;
-        margin-left: 10px;
-        color: #FFC312;
-        }
+.login-dark form .btn-primary:active {
+  transform: translateY(1px);
+}
 
-        .social_icon span:hover{
-        color: white;
-        cursor: pointer;
-        }
 
-        .card-header h3{
-        color: white;
-        }
 
-        .social_icon{
-        position: absolute;
-        right: 20px;
-        top: -45px;
-        }
-
-        .input-group-prepend span{
-        width: 50px;
-        background-color: #FFC312;
-        color: black;
-        border:0 !important;
-        }
-
-        input:focus{
-        outline: 0 0 0 0  !important;
-        box-shadow: 0 0 0 0 !important;
-
-        }
-
-        .remember{
-        color: white;
-        }
-
-        .remember input
-        {
-        width: 20px;
-        height: 20px;
-        margin-left: 15px;
-        margin-right: 5px;
-        }
-
-        .login_btn{
-        color: black;
-        background-color: #FFC312;
-        width: 100px;
-        }
-
-        .login_btn:hover{
-        color: black;
-        background-color: white;
-        }
-
-        .links{
-        color: white;
-        }
-
-        .links a{
-        margin-left: 4px;
-        }
-        </style>
+</style>
 </head>
-<body>
-<div class="container">
-	<div class="d-flex justify-content-center h-100">
-		<div class="card">
-			<div class="card-header">
-				<h3>Sign In</h3>
-				<div class="d-flex justify-content-end social_icon">
 
-				</div>
-			</div>
-			<div class="card-body">
-				<form action="{{route('admin.do.login')}}" method="post">
-                    @csrf
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="text" name="email" class="form-control" placeholder="username">
-
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="password" name="password" class="form-control" placeholder="password">
-					</div>
-
-					<div class="form-group">
-						<button type="submit" class="btn float-right login_btn">Login</button>
-					</div>
-				</form>
-			</div>
-			</div>
-		</div>
-	</div>
-</div>
+<body style="background: #214a80;">
+    <div class="login-dark" style="height: 695px;">
+        <form action="{{route('admin.do.login')}}" method="post">
+            @csrf
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block">Log In</button></div><a class="forgot" href="#">Forgot your email or password?</a></form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

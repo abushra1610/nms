@@ -31,20 +31,75 @@ class BookController extends Controller
     public function addBook(Request $request)
     {
 
+        // dd($request->all());
+
+
+        $file_name='';
+                //step 1: check image exist in this request.
+                 if($request->hasFile('file'))
+                 {
+                     // step 2: generate file name
+                     $file_name=date('Ymdhms') .'.'. $request->file('file')->getClientOriginalExtension();
+                     //step 3 : store into project directory
+
+                     $request->file('file')->storeAs('/uploads',$file_name);
+
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         Booklist::create([
-            'book_name' => $request->name,
+            'book_name' => $request->book_name,
             'category' => $request->category,
             'writer' => $request->writer,
+            'file' =>$file_name
+
         ]);
         return redirect()->route('allBook')->with('success', 'Book created successfully');;
     }
     public function updateBook(Request $request, $id)
     {
 
-        Booklist::where('id', $id)->update([
-            'book_name' => $request->name,
-            'category' => $request->category,
-            'writer' => $request->writer,
+
+        $file_name='';
+        //step 1: check image exist in this request.
+         if($request->hasFile('file'))
+         {
+             // step 2: generate file name
+             $file_name=date('Ymdhms') .'.'. $request->file('file')->getClientOriginalExtension();
+             //step 3 : store into project directory
+
+             $request->file('file')->storeAs('/uploads',$file_name);
+
+      }
+
+
+         $book=BookList::find($id);
+
+
+
+       $book->update([
+        'book_name' => $request->book_name,
+        'category' => $request->category,
+        'writer' => $request->writer,
+        'file' =>$file_name
         ]);
         return redirect()->route('allBook')->with('success', 'Book updated successfully');
     }
@@ -62,6 +117,31 @@ class BookController extends Controller
     }
 
 
+    public function details($id)
+    {
+// dd('add');
+        $list=BookList::find($id);
+        return view('admin.layouts.category.books.view-book',compact('list'));
+    }
 
+//     public function store(Request $request)
+//     {
+// //  dd($request->all());
+// $file_name='';
+//                 //step 1: check image exist in this request.
+//                  if($request->hasFile('book_image'))
+//                  {
+//                      // step 2: generate file name
+//                      $file_name=date('Ymdhms') .'.'. $request->file('book_image')->getClientOriginalExtension();
+//                      //step 3 : store into project directory
+
+//                      $request->file('book_image')->storeAs('/uploads',$file_name);
+
+//               }
+
+
+
+
+//     }
 
 }

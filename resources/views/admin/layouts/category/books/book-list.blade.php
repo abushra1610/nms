@@ -11,7 +11,9 @@
   </button></a><br>
 <br>
 
-<form action="{{route('allBook')}}" method="GET">
+<form action="{{route('allBook')}}" method="post" enctype="multipart/form-data">
+    @method('put')
+    @csrf
 <div class="input-group rounded mt-3 mb-2">
   <div class="form-outline">
     {{-- <input value="{{$key}}" type="text" placeholder="Search" name="search" class="form-control"> --}}
@@ -48,34 +50,14 @@
      <td>{{$allBook->category}}</td>
       <td>{{$allBook->available}}</td>
       <td>
-        <a button type="button" class=" btn btn-success" href="#details{{$allBook->id}}" data-toggle="modal">Details</a>
+        <a button type="button" class=" btn btn-success" href="{{route('detailBook',$allBook->id)}}" data-toggle="">Details</a>
         <a button type="button" class=" btn btn-primary" href="#edit{{$allBook->id}}" data-toggle="modal">Edit</a>
         <a button type="button" class=" btn btn-danger" href="{{route('deleteBook', $allBook->id)}}" >Delete</a>
     </td>
     <div class="modal fade" id="details{{$allBook->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
 
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
 
-                        <div class="form-group">
-                            <label for="">Enter User Email:</label>
-                            <input name="email" type="email" class="form-control" placeholder="Enter user email">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Enter User Password:</label>
-                            <input name="password" type="password" class="form-control" placeholder="Enter user password">
-                        </div>
-
-                    </div>
-
-                </div>
 
         </div>
     </div>
@@ -91,12 +73,13 @@
                         </button>
                     </div>
                     <form method="post" action={{route('updateBook', $allBook->id)}} enctype="multipart/form-data">
+                        @method('put')
                         @csrf
                     <div class="modal-body">
 
                         <div class="form-group">
                             <label for="exampleInputName">Book Name</label>
-                            <input name="name" type="text" class="form-control" id="exampleInputName" value={{$allBook->book_name}}>
+                            <input name="book_name" type="text" class="form-control" id="exampleInputName" value={{$allBook->book_name}}>
 
                         </div>
                                 <div class="form-group">
@@ -112,12 +95,19 @@
                             <label for="exampleInputEmail1">Book Writer</label>
                             <input name="writer" type="text" class="form-control" id="exampleInputWriter1" value={{$allBook->writer}}>
 
+                            <div class="form-group">
+                                <label for="exampleInputName">Book File</label>
+                                <input name="file" type="file" class="form-control" id="exampleInput" value={{$allBook->file}}>
+
+                            </div>
+
                           <div class="form-group">
                             <div class="control">
                               <button type="submit" class="submit-button">
                                 Update
                               </button>
                             </div>
+
                           </div>
 
                     </div>

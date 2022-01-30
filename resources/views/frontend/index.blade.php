@@ -85,10 +85,7 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+
             <a href="{{route('user.donation')}}" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply For Donation</a>
           </div>
         </div>
@@ -98,10 +95,7 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="text-white" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+
             <a href="{{route('user.loan')}}" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Apply For Loan</a>
           </div>
         </div>
@@ -111,10 +105,7 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="text-white" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+
             <a href="{{route('user.abook')}}" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply For Book</a>
           </div>
         </div>
@@ -172,15 +163,14 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-sm-4 position-relative success-video">
-        <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
-          <i class="ti-control-play"></i>
+        <a class="" href="" data-vbtype="">
+          <i class=""></i>
         </a>
       </div>
       <div class="col-lg-6 col-sm-8">
         <div class="bg-white p-5">
           <h2 class="section-title">Success Stories</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+
         </div>
       </div>
     </div>

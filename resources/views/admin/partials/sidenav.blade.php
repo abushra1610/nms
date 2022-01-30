@@ -19,13 +19,13 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{route('scholarship.create')}}">
-                <i class="ni ni-planet text-orange"></i>
+                <i class="ni ni-circle-08 text-violet"></i>
                 <span class="nav-link-text">Admin</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{route('allBook')}}">
-                <i class="ni ni-circle-08 text-pink"></i>
+                <i class="ni ni-circle-08 text-yellow"></i>
                 <span class="nav-link-text">Books</span>
               </a>
             </li>
@@ -36,26 +36,27 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('admin.scholarshipp.create')}}">
-                <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Scholarship_Information</span>
-              </a>
+              <a class="nav-link" href="{{route('admin.member.list')}}">
+                <i class="ni ni-circle-08 text-blue"></i>
+                <span class="nav-link-text">Donor List</span>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="examples/login.html">
-                <i class="ni ni-key-25 text-info"></i>
-                <span class="nav-link-text">Donor Details</span>
-              </a>
-            </li>
+
+            {{-- <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.member.add')}}">
+                    <i class="ni ni-circle-08 text-green"></i>
+                  <span class="nav-link-text">New Donor</span>
+                </a>
+              </li> --}}
+
             <li class="nav-item">
               <a class="nav-link" href="examples/register.html">
-                <i class="ni ni-circle-08 text-pink"></i>
-                <span class="nav-link-text">Donor </span>
+                <i class="ni ni-bullet-list-67 text-default"></i>
+                <span class="nav-link-text">Report</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{route('admin.logout')}}">
-                <i class="ni ni-send text-dark"></i>
+                <i class="ni ni-send text-indigo"></i>
                 <span class="nav-link-text">Sign Out</span>
               </a>
             </li>

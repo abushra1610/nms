@@ -42,47 +42,61 @@
         </div>
         <div class="col-md-6">
           <h2>SCHOLARSHIPS NEWS</h2>
-          <strong class="mb-4 d-block"><i>Our campuses are living laboratories for sustainability.</i></strong>
-          <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore
-            et.dolore magna aliquauis aute irure dolor.
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor, sit
-            amet consectetur adipisicing elit. Quas cum ut ab nesciunt distinctio maxime expedita fugit laborum? Aliquid,
-            quia.</p>
+          <strong class="mb-4 d-block"><i>
+
+
+
+
+
+          </p>
         </div>
       </div>
       <div class="row justify-content-center">
         <!-- scholarship item -->
 
         <li class="d-md-table mb-4 w-100 border-bottom hover-shadow">
-            <div class="d-md-table-cell text-center p-4 bg-primary text-white mb-4 mb-md-0"><span class="h2 d-block">23</span> APR,2019</div>
+            <div class="d-md-table-cell text-center p-4 bg-primary text-white mb-4 mb-md-0"><span class="h2 d-block">23</span> APR,2021</div>
             <div class="d-md-table-cell px-4 vertical-align-middle mb-4 mb-md-0">
-              <a href="notice-single.html" class="h4 mb-3 d-block">Biltong sirloin sausage brisket porchetta prosciutto</a>
-              <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis saepe omnis officia! Doloribus quae maiores laboriosam praesentium enim fugiat ipsam laudantium assumenda!</p>
+              <a href="notice-single.html" class="h4 mb-3 d-block">
+
+              </a>
+              <p class="mb-0">
+
+
+              </p>
             </div>
-            <div class="d-md-table-cell text-right pr-0 pr-md-4"><a href="notice-single.html" class="btn btn-primary">read more</a></div>
+            <div class="d-md-table-cell text-right pr-0 pr-md-4"><a href="{{route('user.page')}}" class="btn btn-primary">Apply Now</a></div>
           </li>
 
         <!-- scholarship item -->
 
 
         <li class="d-md-table mb-4 w-100 border-bottom hover-shadow">
-            <div class="d-md-table-cell text-center p-4 bg-primary text-white mb-4 mb-md-0"><span class="h2 d-block">23</span> APR,2019</div>
+            <div class="d-md-table-cell text-center p-4 bg-primary text-white mb-4 mb-md-0"><span class="h2 d-block">23</span> APR,2021</div>
             <div class="d-md-table-cell px-4 vertical-align-middle mb-4 mb-md-0">
-              <a href="notice-single.html" class="h4 mb-3 d-block">Biltong sirloin sausage brisket porchetta prosciutto</a>
-              <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis saepe omnis officia! Doloribus quae maiores laboriosam praesentium enim fugiat ipsam laudantium assumenda!</p>
+              <a href="notice-single.html" class="h4 mb-3 d-block">
+
+              </a>
+              <p class="mb-0">
+
+              </p>
             </div>
-            <div class="d-md-table-cell text-right pr-0 pr-md-4"><a href="notice-single.html" class="btn btn-primary">read more</a></div>
+            <div class="d-md-table-cell text-right pr-0 pr-md-4"><a href="notice-single.html" class="btn btn-primary">Apply Now</a></div>
           </li>
         <!-- scholarship item -->
 
         <li class="d-md-table mb-4 w-100 border-bottom hover-shadow">
-            <div class="d-md-table-cell text-center p-4 bg-primary text-white mb-4 mb-md-0"><span class="h2 d-block">23</span> APR,2019</div>
+            <div class="d-md-table-cell text-center p-4 bg-primary text-white mb-4 mb-md-0"><span class="h2 d-block">23</span> APR,2021</div>
             <div class="d-md-table-cell px-4 vertical-align-middle mb-4 mb-md-0">
-              <a href="notice-single.html" class="h4 mb-3 d-block">Biltong sirloin sausage brisket porchetta prosciutto</a>
-              <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis saepe omnis officia! Doloribus quae maiores laboriosam praesentium enim fugiat ipsam laudantium assumenda!</p>
+              <a href="notice-single.html" class="h4 mb-3 d-block">
+
+              </a>
+              <p class="mb-0">
+
+
+              </p>
             </div>
-            <div class="d-md-table-cell text-right pr-0 pr-md-4"><a href="notice-single.html" class="btn btn-primary">read more</a></div>
+            <div class="d-md-table-cell text-right pr-0 pr-md-4"><a href="notice-single.html" class="btn btn-primary">Apply Now</a></div>
           </li>
 
 

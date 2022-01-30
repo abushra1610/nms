@@ -16,7 +16,7 @@ class LoginController extends Controller
 
     public function doLogin(Request $request)
     {
-// dd($request->all());
+//  dd($request->all());
         $userInfo=$request->except('_token');
 // //        $credentials['email']=$request->user_email;
 // //        $credentials['password']=$request->user_password;
