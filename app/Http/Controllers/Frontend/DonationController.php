@@ -29,6 +29,7 @@ class DonationController extends Controller
             'mother_occupation'=>$request->mother_occupation,
             'number_of_family_member'=>$request->number_of_family_member,
             'address'=>$request->address,
+            'amount'=>$request->amount,
             'description'=>$request->description,
         ]);
 

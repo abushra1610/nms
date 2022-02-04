@@ -57,6 +57,7 @@
             <input type="text" class="form-control mb-3" id="text" name="mother_occupation" placeholder="Mother_Occupation">
             <input type="number" class="form-control mb-3" id="number" name="number_of_family_member" placeholder="Number_of_Family_Member">
             <input type="text" class="form-control mb-3" id="subject" name="address" placeholder="Address">
+            <input type="number" class="form-control mb-3" id="number" name="amount" placeholder="Amount">
             <textarea name="description" id="message" class="form-control mb-3" placeholder="Description"></textarea>
             <button type="submit" value="send" class="btn btn-primary">Submit</button>
           </form>

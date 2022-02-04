@@ -169,7 +169,7 @@
       </div>
       <div class="col-lg-6 col-sm-8">
         <div class="bg-white p-5">
-          <h2 class="section-title">Success Stories</h2>
+        <a href="{{route('user.ourWork')}}"><h2 class="section-title">Our Work</h2></a>
 
         </div>
       </div>

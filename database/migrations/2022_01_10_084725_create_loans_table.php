@@ -20,11 +20,13 @@ class CreateLoansTable extends Migration
             $table->string('email');
             $table->string('date_of_birth');
             $table->string('address');
-            $table->integer('nid_no');
+            $table->string('nid_no');
             $table->string('institution');
             $table->string('department');
             $table->string('occupation');
+            $table->string('amount');
             $table->string('cause');
+            $table->string('status')->default('Pending');
             $table->timestamps();
         });
     }

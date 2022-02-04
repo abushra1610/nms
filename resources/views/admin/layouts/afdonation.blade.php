@@ -19,6 +19,7 @@
       <th scope="col">Mother_Occupation</th>
       <th scope="col">Number_of_Family_Member</th>
       <th scope="col">Address</th>
+      <th scope="col">Amount</th>
       <th scope="col">Description</th>
 
     </tr>
@@ -37,6 +38,7 @@
                 <td>{{$contact->mother_occupation}}</td>
                 <td>{{$contact->number_of_family_member}}</td>
                 <td>{{$contact->address}}</td>
+                <td>{{$contact->amount}}</td>
                 <td>{{$contact->description}}</td>
 
             </tr>

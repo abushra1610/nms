@@ -28,6 +28,7 @@ class LoanController extends Controller
             'institution'=>$request->institution,
             'department'=>$request->department,
             'occupation'=>$request->occupation,
+            'amount'=>$request->amount,
             'cause'=>$request->cause
         ]);
 

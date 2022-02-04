@@ -19,6 +19,7 @@ class CreateBooklistsTable extends Migration
             $table->string('category');
             $table->string('writer');
             $table->string('file');
+            $table->string('price');
             $table->string('available')->default('yes');
             $table->timestamps();
 

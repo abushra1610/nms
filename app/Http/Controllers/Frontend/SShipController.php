@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Frontend\scholarship;
-use App\Models\scholarship as ModelsScholarship;
+use App\Models\Frontend\Application;
 use Illuminate\Http\Request;
 
 class SShipController extends Controller
@@ -21,8 +20,8 @@ class SShipController extends Controller
 
     public function store(Request $request)
     {
-
-     ModelsScholarship::create([
+dd($request->all());
+     Application::create([
          'name'=>$request->name,
          'email'=>$request->email,
          'subject'=>$request->subject,

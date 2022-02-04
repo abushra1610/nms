@@ -5,7 +5,7 @@
 <p style="text-align: left;">
 
 </p>
-<table class="table table-success table-striped ">
+<table class="table table-success table-striped table-responsive ">
   <thead>
     <tr>
         <th scope="col">SL</th>
@@ -18,8 +18,9 @@
       <th scope="col">Institution</th>
       <th scope="col">Department</th>
       <th scope="col">Occupation</th>
+      <th scope="col">Amount</th>
       <th scope="col">Cause</th>
-
+      <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
@@ -35,9 +36,9 @@
                 <td>{{$contact->institution}}</td>
                 <td>{{$contact->department}}</td>
                 <td>{{$contact->occupation}}</td>
-                <td>{{$contact->address}}</td>
+                <td>{{$contact->amount}}</td>
                 <td>{{$contact->cause}}</td>
-
+                <td>{{$contact->status}}</td>
             </tr>
         @endforeach
   </tbody>

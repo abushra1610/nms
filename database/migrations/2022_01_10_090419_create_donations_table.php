@@ -25,6 +25,7 @@ class CreateDonationsTable extends Migration
             $table->string('mother_occupation');
             $table->string('number_of_family_member');
             $table->string('address');
+            $table->string('amount');
             $table->string('description');
             $table->timestamps();
         });

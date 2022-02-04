@@ -45,7 +45,7 @@
       </div>
       <div class="row">
         <div class="col-lg-7 mb-4 mb-lg-0">
-            <form action="{{route('contact.store')}}" method="post">
+            <form action="{{route('user.store')}}" method="post">
               @csrf
                 <input type="text"  class="form-control mb-3" id="name" name="name" placeholder="Your Name">
             <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Your Email">

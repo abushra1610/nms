@@ -46,30 +46,12 @@ class BookController extends Controller
 
               }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         Booklist::create([
             'book_name' => $request->book_name,
             'category' => $request->category,
             'writer' => $request->writer,
-            'file' =>$file_name
+            'file' =>$file_name,
+            'price' =>$request->price,
 
         ]);
         return redirect()->route('allBook')->with('success', 'Book created successfully');;

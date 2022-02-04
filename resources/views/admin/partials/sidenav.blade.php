@@ -38,15 +38,21 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route('admin.member.list')}}">
                 <i class="ni ni-circle-08 text-blue"></i>
-                <span class="nav-link-text">Donor List</span>
+                <span class="nav-link-text">Member List</span>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.donar.list')}}">
+                  <i class="ni ni-circle-08 text-red"></i>
+                  <span class="nav-link-text">Donor Histery</span>
+              </li>
             {{-- <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.member.add')}}">
                     <i class="ni ni-circle-08 text-green"></i>
                   <span class="nav-link-text">New Donor</span>
                 </a>
               </li> --}}
+
 
             <li class="nav-item">
               <a class="nav-link" href="examples/register.html">

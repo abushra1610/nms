@@ -32,7 +32,11 @@
                 <input type="file" name="file"  class="form-control" id="exampleInput" placeholder="Ex:file" required>
 
             </div>
+            <div class="form-group">
+                <label for="exampleInputName">Book Price </label>
+                <input type="price" name="price"  class="form-control" id="exampleInput" placeholder="Ex:price" required>
 
+            </div>
 
           <div class="form-group">
             <div class="control">

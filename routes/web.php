@@ -12,10 +12,12 @@ use App\Http\Controllers\Frontend\NoticeController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\SshipController;
 use App\Http\Controllers\Backend\LoginController;
+use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Backend\DAController;
 use App\Http\Controllers\Backend\AFDController;
 use App\Http\Controllers\Frontend\DonateController;
+use App\Http\Controllers\Frontend\MDHController;
 use App\Http\Controllers\Frontend\DonationController;
 use App\Http\Controllers\Frontend\LoanController;
 use App\Http\Controllers\Frontend\ABookController;
@@ -120,12 +122,16 @@ Route::post('/scholarshipp/store',[ScholarshipController::class,'store'])->name(
 //approve
 
 Route::get('/approve/{id}',[DAController::class,'approve'])->name('admin.approve');
+Route::get('/here/approve/{id}',[DAController::class,'hereApprove'])->name('here.admin.approve');
+
 
 //member
 
 Route::get('/member/form',[MemberController::class,'create'])->name('admin.member.create');
 Route::post('/member/store',[MemberController::class,'store'])->name('admin.member.store');
 Route::get('/member/list',[MemberController::class,'list'])->name('admin.member.list');
+Route::get('/donar/list',[MDHController::class,'donarList'])->name('admin.donar.list');
+
 // Route::get('/member/add',[MemberController::class,'add'])->name('admin.member.add');
 // Route::post('/member/add',[MemberController::class,'add/store'])->name('admin.member.store');
 
@@ -170,9 +176,11 @@ Route::post('/contact/store',[ContactController::class,'store'])->name('contact.
 Route::get('/donate',[DonateController::class,'Donate'])->name('user.donate');
 Route::post('/donate/store',[DonateController::class,'store'])->name('donate.store');
 
+Route::get('/donatehere',[MDHController::class,'Here'])->name('user.donatehere');
+Route::post('/donatehere/store',[MDHController::class,'store'])->name('donatehere.store');
 
 
-Route::get('/event',[EventController::class,'event'])->name('user.event');
+Route::get('/profile/{id}',[ProfileController::class,'profile'])->name('user.profile');
 
 
 Route::get('/notice',[NoticeController::class,'notice'])->name('user.notice');
@@ -180,7 +188,7 @@ Route::get('/notice',[NoticeController::class,'notice'])->name('user.notice');
 
 Route::get('/scholarship',[SshipController::class,'ship'])->name('user.sship');
  Route::get('/scholarship/application',[SshipController::class,'page'])->name('user.page');
- Route::post('/scholarship/store',[ContactController::class,'store'])->name('user.store');
+ Route::post('/scholarship/application/store',[ContactController::class,'store'])->name('user.store');
 
 
 Route::get('/about',[AboutController::class,'about'])->name('user.about');
@@ -197,6 +205,15 @@ Route::post('/loan',[LoanController::class,'store'])->name('user.loan.store');
 
 Route::get('/abook',[ABookController::class,'book'])->name('user.abook');
 Route::post('/abook',[ABookController::class,'store'])->name('user.abook.store');
+
+
+Route::get('/ourWork',[HomeController::class,'ourWork'])->name('user.ourWork');
+
+Route::get('/ourWork/bookSector',[HomeController::class,'bookSector'])->name('user.bookSector');
+
+Route::get('/ourWork/donationSector',[HomeController::class,'donationSector'])->name('user.donationSector');
+
+Route::get('/ourWork/loanSector',[HomeController::class,'loanSector'])->name('user.loanSector');
 
 
 

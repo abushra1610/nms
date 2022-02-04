@@ -56,6 +56,7 @@
             <input type="text"  class="form-control mb-3" id="name" name="institution" placeholder="Institution_Name">
             <input type="text" class="form-control mb-3" id="text" name="department" placeholder="Department">
             <input type="text" class="form-control mb-3" id="subject" name="occupation" placeholder="Occupation">
+            <input type="number" class="form-control mb-3" id="number" name="amount" placeholder="Amount">
             <textarea name="cause" id="message" class="form-control mb-3"  placeholder="Cause For Loan"></textarea>
             <button type="submit" value="send" class="btn btn-primary">Submit</button>
           </form>

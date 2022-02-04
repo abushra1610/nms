@@ -39,9 +39,18 @@
                 <a class="nav-link" href="{{route('user.about')}}">About</a>
               </li>
 
+              <li class="nav-item @@about">
+                <a class="nav-link" href="{{route('user.profile',auth()->User()->id)}}">Profile</a>
+              </li>
+
               <li class="nav-item @@contact">
                 <a class="nav-link" href="{{route('user.contact')}}">CONTACT</a>
               </li>
+
+              <li class="nav-item @@contact">
+                <a class="nav-link" href="{{route('user.donatehere')}}">Donate Here</a>
+              </li>
+
             </ul>
           </div>
         </nav>
